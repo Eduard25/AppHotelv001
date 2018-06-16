@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -12,10 +12,10 @@
 		<div data-role="header">
 		</div>
 		<div data-role="main" class="ui-content">
-			<img src="img/logo-hotel.png">
-			<input type="text" name="email" id="email" placeholder="Correo">
-			<input type="password" name="password" id="password" placeholder="Contraseña">
-			<a href="#main" class="ui-btn ui-btn-active">
+			<img src="img/hotel-logo.jpg">
+			<input type="text" name="email" id="email-inicio" placeholder="Correo">
+			<input type="password" name="password" id="password-inicio" placeholder="Contraseña">
+			<a id="btn-inicio-sesion" class="ui-btn ui-btn-active">
 				Iniciar Sesión
 			</a>
 			<a href="#registro">¿Aún no tienes Cuenta?</a>
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 		<div data-role="main" class="ui-content">
-			<img src="img/logo-hotel.png">
+			<img src="img/hotel-logo.jpg">
 			<p>Bienvenido Juan</p>
 			<a href="#reservar" class="ui-btn ui-btn-active">
 				¡Reserva Ya!
@@ -60,7 +60,9 @@
 		<div data-role="panel" id="menu" data-display="overlay">
 			<h3>Menú</h3>
 			<ul data-role="listview">
-				<li>Inicio</li>
+				<li>
+					<a href="#inicio">Inicio</a>
+				</li>
 				<li>
 					<a href="#reservar">Reservar</a>
 				</li>
@@ -70,7 +72,9 @@
 				<li>
 					<a href="#galeria">Galería</a>
 				</li>
-				<li>Privacidad</li>
+				<li>
+					<a href="#privacidad">Privacidad</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -98,135 +102,17 @@
 				<option>5 o más</option>
 			</select>
 
-			<p>Fecha de Entrada</p>
-			<fieldset class="ui-grid-b">
-			    <div class="ui-block-a">
-			    	<select>
-						<option>Día</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>11</option>
-						<option>12</option>
-						<option>13</option>
-						<option>14</option>
-						<option>15</option>
-						<option>16</option>
-						<option>17</option>
-						<option>18</option>
-						<option>19</option>
-						<option>20</option>
-						<option>21</option>
-						<option>22</option>
-						<option>23</option>
-						<option>23</option>
-						<option>24</option>
-						<option>26</option>
-						<option>27</option>
-						<option>28</option>
-						<option>29</option>
-						<option>30</option>
-						<option>31</option>
-					</select>
-			    </div>
-			    <div class="ui-block-b">
-			    	<select>
-						<option>Mes</option>
-						<option>Enero</option>
-						<option>Febrero</option>
-						<option>Marzo</option>
-						<option>Abril</option>
-						<option>Mayo</option>
-						<option>Junio</option>
-						<option>Julio</option>
-						<option>Agosto</option>
-						<option>Septiembre</option>
-						<option>Octubre</option>
-						<option>Noviembre</option>
-						<option>Diciembre</option>
-					</select>
-			    </div>
-			    <div class="ui-block-c">
-			    	<select>
-						<option>Año</option>
-						<option>2018</option>
-					</select>
-			    </div>
-			</fieldset>
+			<p>Fecha de ingreso</p>
+			<input type="date" name="date" id="date" placeholder="Fecha de ingreso">
+			<p>Fecha de salida</p>
+			<input type="date" name="date" id="date" placeholder="Fecha de salida">
 
-			<p>Fecha de Salida</p>
-			<fieldset class="ui-grid-b">
-			    <div class="ui-block-a">
-			    	<select>
-						<option>Día</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>11</option>
-						<option>12</option>
-						<option>13</option>
-						<option>14</option>
-						<option>15</option>
-						<option>16</option>
-						<option>17</option>
-						<option>18</option>
-						<option>19</option>
-						<option>20</option>
-						<option>21</option>
-						<option>22</option>
-						<option>23</option>
-						<option>23</option>
-						<option>24</option>
-						<option>26</option>
-						<option>27</option>
-						<option>28</option>
-						<option>29</option>
-						<option>30</option>
-						<option>31</option>
-					</select>
-			    </div>
-			    <div class="ui-block-b">
-			    	<select>
-						<option>Mes</option>
-						<option>Enero</option>
-						<option>Febrero</option>
-						<option>Marzo</option>
-						<option>Abril</option>
-						<option>Mayo</option>
-						<option>Junio</option>
-						<option>Julio</option>
-						<option>Agosto</option>
-						<option>Septiembre</option>
-						<option>Octubre</option>
-						<option>Noviembre</option>
-						<option>Diciembre</option>
-					</select>
-			    </div>
-			    <div class="ui-block-c">
-			    	<select>
-						<option>Año</option>
-						<option>2018</option>
-					</select>
-			    </div>
-			</fieldset>
 			<label>
 		        <input type="checkbox" name="checkbox-0 ">Aceptar Términos
 		    </label>
 
 		    <button class="ui-btn ui-btn-active">
-		    	Reservar
+		    	<a href="#main" style="color: white;">Reservar</a>
 		    </button>
 		</div>	   
 	</div>
@@ -249,19 +135,19 @@
 				<tbody>
 					<tr>
 						<td>21-04-2018</td>
-						<td>Juan Pérez</td>
+						<td>Mariana López</td>
 					</tr>
 					<tr>
 						<td>17-05-2018</td>
-						<td>Juan Pérez</td>
+						<td>Mariana López</td>
 					</tr>
 					<tr>
 						<td>29-05-2018</td>
-						<td>Juan Pérez</td>
+						<td>Mariana López</td>
 					</tr>
 					<tr>
 						<td>29-05-2018</td>
-						<td>Juan Pérez</td>
+						<td>Mariana López</td>
 					</tr>
 				</tbody>
 			</table>
@@ -269,29 +155,97 @@
 	</div>
 
 	<div id="galeria" data-role="page">
+				<div data-role="header" class="padding-4tb">
+				<div data-role="control-group" data-type="horizontal" class="ui-btn-left">
+					<a data-rel="back" data-icon="arrow-l" data-role="button" class="menu-btn"></a>
+				</div>
+					<h1>Galeria</h1>
+				</div>
+					<div data-role="popup" id="img11" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/11.jpg">
+					</div>
+					<div data-role="popup" id="img12" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/12.jpg">
+					</div>
+					<div data-role="popup" id="img13" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/13.jpg">
+					</div>
+					<div data-role="popup" id="img14" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/14.jpg">
+					</div>
+					<div data-role="popup" id="img15" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/15.jpg">
+					</div>
+					<div data-role="popup" id="img16" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/16.jpg">
+					</div>
+					<div data-role="popup" id="img17" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/17.jpg">
+					</div>
+					<div data-role="popup" id="img18" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/18.jpg">
+					</div>
+					<div data-role="popup" id="img19" data-overlay-theme="b">
+						<a data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+						<img src="img/19.jpg">
+					</div>
+
+					<div data-role="main" class="ui-content">
+						<div class="ui-grid-b">
+							<div class="ui-block-a"><a href="#img11" data-rel="popup"><img src="img/11.jpg"></a></div>
+							<div class="ui-block-b"><a href="#img12" data-rel="popup"><img src="img/12.jpg"></a></div>
+							<div class="ui-block-c"><a href="#img13" data-rel="popup"><img src="img/13.jpg"></a></div>
+							<div class="ui-block-a"><a href="#img14" data-rel="popup"><img src="img/14.jpg"></a></div>
+							<div class="ui-block-b"><a href="#img15" data-rel="popup"><img src="img/15.jpg"></a></div>
+							<div class="ui-block-c"><a href="#img16" data-rel="popup"><img src="img/16.jpg"></a></div>
+							<div class="ui-block-a"><a href="#img17" data-rel="popup"><img src="img/17.jpg"></a></div>
+							<div class="ui-block-b"><a href="#img18" data-rel="popup"><img src="img/18.jpg"></a></div>
+							<div class="ui-block-c"><a href="#img19" data-rel="popup"><img src="img/19.jpg"></a></div>
+						</div>
+					</div>	
+	</div>
+
+	<div id="privacidad" data-role="page">
+ 		<div data-role="header">
+ 			<div data-role="control-group" data-type="horizontal" class="ui-btn-left">
+					<a data-rel="back" data-icon="arrow-l" data-role="button" class="menu-btn"></a>
+ 			</div>
+ 		<h1>Aviso de privacidad</h1>
+ 		</div>
+ 		<div data-role="main" class="ui-content">
+ 			<p>
+ 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+ 			</p>		
+ 		</div>	
+ 	</div>
+	<div id="verificado" data-role="page">
 		<div data-role="header" class="padding-4tb">
-			<div data-role="control-group" data-type="horizontal" class="ui-btn-left">
-				<a data-rel="back" data-icon="arrow-l" data-role="button" class="menu-btn"></a>
-			</div>
-			<h1>Galeria</h1>
 		</div>
-		<div data-role="main" class="ui-content">
-			<div class="ui-grid-b">
-				<div class="ui-block-a"><img src="img/1.jpg"></div>
-				<div class="ui-block-b"><img src="img/2.jpg"></div>
-				<div class="ui-block-c"><img src="img/3.jpg"></div>
-				<div class="ui-block-a"><img src="img/4.jpg"></div>
-				<div class="ui-block-b"><img src="img/5.jpg"></div>
-				<div class="ui-block-c"><img src="img/6.jpg"></div>
-				<div class="ui-block-a"><img src="img/7.jpg"></div>
-				<div class="ui-block-b"><img src="img/8.jpg"></div>
-				<div class="ui-block-c"><img src="img/9.jpg"></div>
-			</div>
+		<div data-role="main" class="ui-content" style="width: 200px 0; height: 100px 0;">
+			<h1>Verificado</h1>
+			<img src="img/hotel-logo.jpg">	
+				<p>Su reservación ha sido verificada y guardada con éxito</p>
+				<p>Gracias por reservar con nosotros</p>
+				<a href="#inicio" class="ui-btn ui-btn-active" style="color: white;">Regresar</a>
 		</div>
 	</div>
 
 	<script type="text/javascript" src="phonegap.js"></script>
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
